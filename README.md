@@ -1,0 +1,2 @@
+# serviceapp
+A  platform which will help service providers like domestic workers, electrician, plumbers, drivers in getting their job.   Service providers needn't to be worry about finding work. They will be registering to the platform, where anyone can see they are available for work and can contact them. It will also be helpful to the service providers who have lost their job due to covid, they can find new jobs with help of this platform. It will also help them, who are not satisfied with their current job.

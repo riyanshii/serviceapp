@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <!-- <link rel="stylesheet" href=""> -->
+    <title>OUR APP</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="s.css">
+</head>
+
+<body style="background-image:url(/b_g1.jpg); min-height: 100vh;">
+    <div class="login-reg-panel">
+        <div class="login-info-box">
+            <h2>Have an account?</h2>
+            <label id="label-register" for="log-reg-show">Login</label>
+            <input type="radio" name="active-log-panel" id="log-reg-show" checked="checked">
+        </div>
+
+        <div class="register-info-box">
+            <h2>Don't have an account?</h2>
+            <label id="label-login" for="log-login-show">Register</label>
+            <input type="radio" name="active-log-panel" id="log-login-show">
+        </div>
+
+        <div class="white-panel">
+            <div class="login-show">
+                <form action="/user-login" method="POST">
+                    <h2>LOGIN</h2>
+                    <input type="text" placeholder="Phn No" name="phone">
+                    <input type="password" placeholder="Password" name="password">
+                    <input type="submit" value="Login" class="btn btn-success my-1 d-inline">
+                    <a href="">Forgot password?</a>
+                </form>
+            </div>
+            <div class="register-show">
+                <form action="/user-register" method="POST">
+                    <h2>REGISTER</h2>
+                    <input type="text" placeholder="Name" name="name">
+                    <input type="text" placeholder="Phn No" name="phone">
+                    <input type="password" placeholder="Password" name="password">
+                    <input type="password" placeholder="Confirm Password" name="cpassword">
+                    <input type="text" placeholder="City" name="city">
+                    <input type="text" placeholder="Address" name="address">
+                    <input type="submit" value="Register" class="btn btn-success my-1 d-inline">
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js "></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js "></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

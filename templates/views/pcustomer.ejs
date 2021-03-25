@@ -1,0 +1,39 @@
+<%- include('../partials/header') -%>
+
+    <div style="background-image:url(/b_g1.jpg); min-height: 100vh;">
+        <form action="/search-result" method="post" style="width: 50vw; margin-left: 10vw;">
+            <div class="form-group">
+                <label for="typework"><div style = "color : white ; font-size : 35px; margin-top:2vh; margin-bottom: 5vh ;">Enter the type of work required </div> </label>
+                <div class="d-flex">
+                    <input style="height: 60px; width: 500px;" type="text" class="form-control" id="typework" aria-describedby="work" placeholder="work" name="reqwork">
+                    <input style="margin-left: 8%;" type="submit" value="Search" class="btn btn-info">
+                </div>
+            </div>
+        </form>
+        <% if(emp) {%>
+            <%   if(searchResults.length>0) { %>
+                <h2 style="color:white; margin-top: 3vh; margin-left : 2vw;">Search Results </h2>
+                <div class="results" style="color:white; margin-top: 5vh; margin-left : 2vw; ">
+                    <% searchResults.forEach( (item, index) => { %>
+                        <div style="margin-top: 5vh;border-left:white 3px solid;padding-left:7px;">
+                            <h4>Name:
+                                <%= userOfWork[index].name %>
+                            </h4>
+                            <h4>Money Charged :
+                                <%= item.price %> Rs/
+                                    <%=item.duration%>
+                            </h4>
+                            <h4>Phone number:
+                                <%= userOfWork[index].phone %>
+                            </h4>
+                        </div>
+                        <% }) %>
+                </div>
+                <%} else {%>
+                    <h4 style="color:white; margin-top: 5vh; margin-left : 2vw;"> No work found. </h4>
+                    <%  } %>
+                        <%} %>
+    </div>
+
+
+    <%- include('../partials/footer') -%>
